@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CDC88487-98B0-4E3F-B5C9-6D6F6FADD86A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjectTrial</RootNamespace>
+    <AssemblyName>ProjectTrial</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLayer\Admin.cs" />
+    <Compile Include="BusinessLayer\Attendance.cs" />
+    <Compile Include="BusinessLayer\Courses.cs" />
+    <Compile Include="BusinessLayer\IPerson.cs" />
+    <Compile Include="BusinessLayer\Lectures.cs" />
+    <Compile Include="BusinessLayer\Student.cs" />
+    <Compile Include="BusinessLayer\Teacher.cs" />
+    <Compile Include="BusinessLayer\User.cs" />
+    <Compile Include="DataLayer\Connection.cs" />
+    <Compile Include="Presentation\AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\AdminPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\AdminPortal.Designer.cs">
+      <DependentUpon>AdminPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\AssignCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\AssignCourse.Designer.cs">
+      <DependentUpon>AssignCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Lec1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Lec1.Designer.cs">
+      <DependentUpon>Lec1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Lec2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Lec2.Designer.cs">
+      <DependentUpon>Lec2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Lec3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Lec3.Designer.cs">
+      <DependentUpon>Lec3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Lec4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Lec4.Designer.cs">
+      <DependentUpon>Lec4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Lec5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Lec5.Designer.cs">
+      <DependentUpon>Lec5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\StudentLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\StudentLogin.Designer.cs">
+      <DependentUpon>StudentLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\StudentPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\StudentPortal.Designer.cs">
+      <DependentUpon>StudentPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\TeacherLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\TeacherLogin.Designer.cs">
+      <DependentUpon>TeacherLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Teachers_Portal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Teachers_Portal.Designer.cs">
+      <DependentUpon>Teachers_Portal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectLMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectLMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectLMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectLMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectLMSDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectLMSDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\AdminPortal.resx">
+      <DependentUpon>AdminPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\AssignCourse.resx">
+      <DependentUpon>AssignCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Lec1.resx">
+      <DependentUpon>Lec1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Lec2.resx">
+      <DependentUpon>Lec2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Lec3.resx">
+      <DependentUpon>Lec3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Lec4.resx">
+      <DependentUpon>Lec4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Lec5.resx">
+      <DependentUpon>Lec5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\StudentLogin.resx">
+      <DependentUpon>StudentLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\StudentPortal.resx">
+      <DependentUpon>StudentPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\TeacherLogin.resx">
+      <DependentUpon>TeacherLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Teachers_Portal.resx">
+      <DependentUpon>Teachers_Portal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="ProjectLMSDataSet.xsc">
+      <DependentUpon>ProjectLMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectLMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectLMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectLMSDataSet.xss">
+      <DependentUpon>ProjectLMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectLMSDataSet1.xsc">
+      <DependentUpon>ProjectLMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectLMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectLMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectLMSDataSet1.xss">
+      <DependentUpon>ProjectLMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectLMSDataSet2.xsc">
+      <DependentUpon>ProjectLMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectLMSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectLMSDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectLMSDataSet2.xss">
+      <DependentUpon>ProjectLMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
